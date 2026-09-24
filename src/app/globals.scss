@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --color-primary-dark: #0F1014;
+  --color-primary-medium: #1E2027;
+  --color-primary-light: #8098a8;
+  --color-neutral-dark: #3c4142;
+  --color-neutral-medium: #cec7c2;
+  --color-neutral-light: #e3ded9;
+  --color-white: #f4f2f0;
+  --color-secondary: #f9e2e6;
+
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Gloock", cursive;
+
+
+
+}
+* {
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: var(--font-primary);
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: black;
+}

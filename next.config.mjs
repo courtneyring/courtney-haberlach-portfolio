@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  turbopack: {},
+  transpilePackages: ["@courtneyring/components-library"],
 };
 
 export default nextConfig;
