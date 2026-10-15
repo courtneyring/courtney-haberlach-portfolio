@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.scss";
 import PortfolioNavbar from "@/components/PortfolioNavbar/PortfolioNavbar";
-import { Footer } from "@courtneyring/components-library";
+import { Footer, Container } from "@courtneyring/components-library";
 import styles from './layout.module.scss';
 
 const geistSans = Geist({
@@ -25,7 +25,12 @@ export default function RootLayout({ children }) {
       <body>
         <PortfolioNavbar />
         {children}
-        <Footer logo='/courtney-haberlach-logo.svg' className={styles.footer}/>
+        <Container color='color-primary-dark'>
+          <Footer
+            logo="/courtney-haberlach-logo.svg"
+            className={styles.footer}
+          />
+        </Container>
       </body>
     </html>
   );

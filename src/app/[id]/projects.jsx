@@ -1,4 +1,12 @@
-export default [
+import {
+  Background,
+  Banner,
+  Masonry,
+  Quote,
+} from "@courtneyring/components-library";
+import styles from "./page.module.scss";
+
+const projects = [
   {
     id: "ford-drive",
     title: "Ford Built Wild & Built to Electrify",
@@ -6,7 +14,7 @@ export default [
     subtitle: "lorem ipsum",
     featured: true,
     body: "<p>When autoshows returned after Covid during the summer of 2021, Ford wanted to make a big impression for its flashiest cars - the Bronco and the Mach-E.</p><p>TThe Bronco draws customers in because of its off-roading capabilities and Ford wanted to demonstrate just that. Imagination designed and built an obstacle course ending with “The Mountain” to showcase the Bronco’s peak incline and decline angles.</p><p>The Mach-E is Ford’s electric sports car with an impressive ability to accelerate from 0-60 in 3.5 seconds. With this same desire to show off peak performance, Ford had a runway for drivers to put the pedal to the metal and allow participants to feel the speed for themselves.</p><p>In both cases, Ford wanted customers to have a digital souvenir to go home with to remember these experiences. So as part of the activation, we built an application that records visitors’ reaction at the exact moment of surprise and delight and programmatically edit the video for a keepsake they could view and share afterwards.</p>",
-    heroImg: "hero.jpeg",
+    heroImg: "/images/hero.jpeg",
     heroPos: "50% 35%",
     tileImg: "/images/ford-drive/tile.png",
     employer: "Imagination",
@@ -157,42 +165,99 @@ export default [
     client: "Aptiv",
     role: "Frontend Developer",
     heroPos: "47% 90%",
-    heroImg: "hero.jpg",
+    heroImg: "/images/aptiv-sva/hero.jpg",
     tileImg: "/images/aptiv-sva/tile.jpg",
-    body: "<p>As a result of the Covid-19 pandemic, many companies had to switch their strategies from physical, in-person events to online virtual events. Aptiv was no exception. To stand out in the sea of virtual events that took over the industry, we created an augmented reality tool to showcase Aptiv’s complex offerings and bring a surprise-and-delight factor to the regular virtual meeting.</p><p>The goal was to mimic a hands-on experience, giving users a 360 degree view of their smart vehicle architecture and allowing them to click on hotspots to zero in on individual parts of the technology. Each hotspots features a 3D model for users to manipulate on their own screen or launch in AR to see them in their own environment.</p>",
+    summary:
+      "An AR tool built during COVID-19 that let Aptiv showcase its Smart Vehicle Architecture in a fully interactive 3D experience — bringing a hands-on, in-person feel to virtual sales meetings and events.",
     sections: [
       {
-        layout: "image",
-        image: "mockup.png",
-        backgroundColor: "#191C23",
+        layout: Masonry,
+        container: {
+          color: "color-primary-medium",
+          maxWidth: 'xl'
+        },
+        component: {
+          images: [
+            "/images/aptiv-sva/model-view.jpg",
+            "/images/aptiv-sva/ar-presentation.jpg",
+            "/images/aptiv-sva/virtual-presentation.jpg",
+            "/images/aptiv-sva/ar-sva.jpg",
+          ],
+        },
       },
       {
-        layout: "text",
-        title: "Technical Details",
-        body: "<p>The application was built with Angular, using three.js to handle the 3d models, hotspots, and animations, and Google’s <model-viewer> for the augmented reality piece. It’s completely responsive to all screen sizes, and detects screen type to properly guide the user on how to launch the AR models. </p>",
-        backgroundColor: "#EBECED",
-        textColor: "#667084",
+        layout: Banner,
+        component: {
+          className: "banner",
+          header: "Why This Mattered",
+          body: "When the pandemic forced Aptiv’s events strategy from in-person to virtual, showing off a complex product like Smart Vehicle Architecture got a lot harder — you can’t hand someone a physical component over a video call. Aptiv needed a way to stand out in a sea of virtual meetings and give customers something closer to a hands-on experience, remotely.",
+          alignment: "left",
+        },
+        container: {
+          color: "color-primary-light",
+          maxWidth: "sm",
+        },
       },
       {
-        layout: "background-image",
-        backgroundImage: "mockup-2.png",
-        backgroundPosX: 69,
-        backgroundPosY: 69,
+        layout: Background,
+        component: {
+          image: "/images/aptiv-sva/mockup-2.png",
+          x: "69%",
+          y: "69%",
+        },
+        container: {
+          styleless: true,
+        },
       },
       {
-        layout: "text",
-        title: "Outcome",
-        body: "<p>The first phase of the project was completed in October 2020 and debuted at the all-virtual CES conference in 2021 that reached over 10,000 attendees in total between customer, employees and other stakeholders. We continued to iterate on the tool as clients expanded its use across the company and delivered a similar tool for Motional - the autonomous driving join venture between Aptiv and Hyundai - later that year. </p>",
-        backgroundColor: "#EBECED",
-        textColor: "#667084",
+        layout: Banner,
+        component: {
+          alignment: "left",
+          header: "My Role",
+          body: "As Frontend Developer, I built the application in Angular, using three.js to power the 3D models, hotspots, and animations, and Google’s <model-viewer> to handle the AR experience. Users could explore a 360° view of the vehicle architecture, click hotspots to zero in on individual components, and either manipulate each part as a 3D model on-screen or launch it in AR to view in their own space. I also made the experience fully responsive, detecting screen type to guide users on how to launch AR correctly on their specific device.",
+        },
+        container: {
+          color: "color-primary-medium",
+          maxWidth: "sm",
+        },
       },
       {
-        backgroundImage: "placeholder-background.png",
-        layout: "quote",
-        quote:
-          "I want to recognize Imagination for […] helping us find innovative solutions for how we can reach our customers, not only from taking a physical product to a digital solution, but also helping bring that technology to life by doing event remotely by applying different types of digital tools to make it engaging.",
-        speaker:
-          "Rachelle Valdez Vice President, Marketing and Communications, Americas at Aptiv",
+        layout: Masonry,
+        container: {
+          color: "color-primary-light",
+          maxWidth: 'lg'
+        },
+        component: {
+          images: [
+            "/images/aptiv-sva/mockup.png",
+          ],
+        },
+      },
+      {
+        layout: Banner,
+        component: {
+          alignment: "left",
+          header: "Outcome",
+          body: "The campaign sparked meaningful conversations about racial bias in policing, gaining widespread attention. It earned top industry honors, including a Clio Grand, multiple Cannes Lions, One Show, and Webby awards, cementing its status as a powerful example of experiential marketing for social change.",
+        },
+        container: {
+          color: "color-primary-medium",
+          maxWidth: "sm",
+        },
+      },
+      {
+        layout: Quote,
+        component: {
+          quote:
+            "I want to recognize Imagination for […] helping us find innovative solutions for how we can reach our customers, not only from taking a physical product to a digital solution, but also helping bring that technology to life by doing event remotely by applying different types of digital tools to make it engaging.",
+          speaker:
+            "Rachelle Valdez Vice President, Marketing and Communications, Americas at Aptiv",
+        },
+
+        container: {
+          color: "color-primary-light",
+          maxWidth: "xl",
+        },
       },
     ],
   },
@@ -439,3 +504,14 @@ export default [
     ],
   },
 ];
+
+const projectsUpdates = projects.map((project, idx) => ({
+  ...project,
+  recommended: [1, 2, 3].map((offset) => {
+    const { id, tileImg, title } = projects[(idx + offset) % projects.length];
+    return { id, tileImg, title };
+  }),
+}));
+
+
+export default projectsUpdates;

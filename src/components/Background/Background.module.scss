@@ -1,0 +1,9 @@
+.background {
+  height: 70vh;
+}
+
+@media (min-width: 768px) {
+  .background {
+    height: 100vh;
+  }
+}

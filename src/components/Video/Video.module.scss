@@ -1,0 +1,43 @@
+.media {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  img {
+    height: 100%;
+  }
+
+  video {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.embed {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  width: 80%;
+}
+
+.play {
+  position: absolute;
+  width: 70px;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .media {
+    height: 80vh;
+
+    video {
+      width: auto;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+
+  .play {
+    width: 100px;
+    height: auto;
+  }
+}
