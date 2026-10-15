@@ -3,56 +3,132 @@ import {
   Banner,
   Masonry,
   Quote,
+  Carousel,
 } from "@courtneyring/components-library";
 import styles from "./page.module.scss";
 
 const projects = [
   {
     id: "ford-drive",
-    title: "Ford Built Wild & Built to Electrify",
-    shortTitle: "Built Wild",
-    subtitle: "lorem ipsum",
-    featured: true,
-    body: "<p>When autoshows returned after Covid during the summer of 2021, Ford wanted to make a big impression for its flashiest cars - the Bronco and the Mach-E.</p><p>TThe Bronco draws customers in because of its off-roading capabilities and Ford wanted to demonstrate just that. Imagination designed and built an obstacle course ending with “The Mountain” to showcase the Bronco’s peak incline and decline angles.</p><p>The Mach-E is Ford’s electric sports car with an impressive ability to accelerate from 0-60 in 3.5 seconds. With this same desire to show off peak performance, Ford had a runway for drivers to put the pedal to the metal and allow participants to feel the speed for themselves.</p><p>In both cases, Ford wanted customers to have a digital souvenir to go home with to remember these experiences. So as part of the activation, we built an application that records visitors’ reaction at the exact moment of surprise and delight and programmatically edit the video for a keepsake they could view and share afterwards.</p>",
-    heroImg: "/images/hero.jpeg",
+    title: "Ford Built Wild & Electric",
+    summary:
+      "A digital keepsake experience for Ford’s Bronco and Mach-E, using onboard sensors to capture riders’ reactions at peak incline and acceleration, then auto-editing a personalized video to take home.",
+    heroImg: "/images/ford-drive/hero.jpeg",
     heroPos: "50% 35%",
     tileImg: "/images/ford-drive/tile.png",
-    employer: "Imagination",
-    client: "Ford",
-    role: "Fullstack Developer, Onsite Support",
-    skills: "Python, Angular, Scss, Node.js, Next.js, RabbitMQ, MySql",
     sections: [
       {
-        layout: "video",
-        video: "mache.mp4",
-        backgroundColor: "#191c23",
-        placeholder: "mache-placeholder.png",
+        layout: Masonry,
+        container: {
+          color: "color-primary-medium",
+          maxWidth: "xl",
+        },
+        component: {
+          images: [
+            "/images/ford-drive/masonry-1.jpg",
+            "/images/ford-drive/masonry-2.jpg",
+            "/images/ford-drive/masonry-3.jpg",
+            "/images/ford-drive/masonry-4.jpg",
+          ],
+        },
       },
       {
-        layout: "text",
-        title: "Technical Details",
-        body: "<p>The goal of the project was get clips of video on  peak incline/decline for the Bronco and peak acceleration for the Mach-E.</p><p>In order to do this, we had an accelerometer and gyroscope in the trunk of each vehicle. We used a python script on a raspberry pi to read and process these numbers continuously. We used the accelerometer readings directly for the Mach-E, but the Bronco needed data on the incline angle of the car, so we used the data from both sensors and the complimentary filter to combine them into an incline angle.</p><p>All of this data was then sent to the video recording application running on a laptop, also in stored in the trunk of the car. The application was connected to a webcam attached to the dashboard that recorded the participants in the back seat. As the vehicle hit incline, decline, and acceleration thresholds, the video application recorded timestamps. Once the ride ended, the video and timestamps were then passed off to the video processing application.</p><p>The backend which received these requests and did the video processing was run on a physical server kept in back of house.  The video processing application itself was run in a docker container on a virtual machine on that server. The application used a node backend to queue jobs using rabbitmq as they came in from the frontend and a node worker to process each job. Ffmpeg was used to splice the video at the given timestamps, add clips of stock video, audio, and a layover. It then sent the final product to Amazon S3 for storage and an email to the user for them to view and share.</p>",
-        backgroundColor: "#EBECED",
-        textColor: "#667084",
+        layout: Banner,
+        component: {
+          className: "banner",
+          header: "Why This Mattered",
+          body: "When auto shows returned after COVID in the summer of 2021, Ford wanted its return to make an impression — specifically with its two flashiest vehicles, the Bronco and the Mach-E. Off-roading and 0-60 acceleration don’t translate well to a showroom floor, so the challenge was building physical experiences that let attendees feel those capabilities firsthand, then giving them something to take home and share.",
+          alignment: "left",
+        },
+        container: {
+          color: "color-primary-light",
+          maxWidth: "sm",
+        },
       },
       {
-        layout: "background-image",
-        backgroundImage: "background-1.png",
-        backgroundPosX: 50,
-        backgroundPosY: 40,
+        layout: Background,
+        component: {
+          image: "/images/ford-drive/grey-bronco-on-obstacle.jpg",
+          x: "69%",
+          y: "39%",
+        },
+        container: {
+          styleless: true,
+        },
       },
       {
-        layout: "text",
-        title: "Outcome",
-        body: '<p>The "Built Wild" and "Build to Electrify" activations debuted at the Chicago Autoshow 2021 with massive success. Ford continued with the program for the 2021 autoshow season. During my time supporting this activation between July 2021 and March 2022, it was brought to 8 different auto shows and 28,552 total videos were sent to customers. The activation is still brought to auto shows across the country today.</p>',
-        backgroundColor: "#191c23",
-        textColor: "#ffffff",
+        layout: Banner,
+        component: {
+          alignment: "left",
+          header: "My Role",
+          body: "As Senior Software Engineer, I designed and built the system that powered both experiences: sensors in each vehicle detected the exact moments of peak incline, decline, and acceleration, triggering a video pipeline that automatically edited and delivered a personalized keepsake to every rider. I also provided onsite support across the activation’s run, troubleshooting hardware and software in real time as the program traveled to 8 auto shows over eight months — keeping the experience reliable at each new venue with a different crowd, layout, and set of constraints.",
+        },
+        container: {
+          color: "color-primary-medium",
+          maxWidth: "sm",
+        },
       },
       {
-        layout: "video",
-        video: "bronco.mp4",
-        backgroundColor: "#ebeced",
-        placeholder: "bronco-placeholder.png",
+        layout: Carousel,
+        component: {
+          items: [
+            {
+              image: "/images/ford-drive/carousel-1.jpg",
+              caption:
+                "An obstacle course ending in “The Mountain” let attendees feel the Bronco’s peak incline and decline angles firsthand.",
+            },
+            {
+              image: "/images/ford-drive/carousel-2.jpg",
+              caption:
+                "The Mach-E goes 0-60 in 3.5 seconds — so we built a straightaway and let drivers feel it themselves.",
+            },
+            {
+              image: "/images/ford-drive/carousel-3.jpg",
+              caption:
+                "An accelerometer and gyroscope, hidden in the trunk of each vehicle, tracked motion throughout the ride.",
+            },
+            {
+              image: "/images/ford-drive/carousel-4.jpg",
+              caption:
+                "A Raspberry Pi ran a custom Python script to read and process sensor data continuously as the vehicle moved.",
+            },
+            {
+              image: "/images/ford-drive/carousel-5.jpg",
+              caption:
+                "The Bronco’s incline angle wasn’t a direct sensor reading — it came from combining both sensors using a complementary filter.",
+            },
+            {
+              image: "/images/ford-drive/carousel-6.jpg",
+              caption:
+                "A dashboard-mounted webcam recorded riders in the back seat, synced to timestamp triggers at each peak moment.",
+            },
+            {
+              image: "/images/ford-drive/carousel-7.jpg",
+              caption:
+                "Every ride triggered a backend pipeline — jobs queued with RabbitMQ, processed by a Node worker, and spliced together with FFmpeg.",
+            },
+            {
+              image: "/images/ford-drive/carousel-8.jpg",
+              caption:
+                "Finished videos were stored on Amazon S3 and emailed directly to riders to keep and share.",
+            },
+          ],
+        },
+        container: {
+          color: "color-primary-dark",
+        },
+      },
+      {
+        layout: Banner,
+        component: {
+          alignment: "left",
+          header: "Outcome",
+          body: "“Built Wild” and “Built to Electrify” debuted at the Chicago Auto Show in 2021 to strong results, and Ford extended the program for the rest of the season. Between July 2021 and March 2022, the activation traveled to 8 auto shows and generated 28,552 personalized videos for attendees.",
+        },
+        container: {
+          color: "color-primary-light",
+          maxWidth: "sm",
+        },
       },
     ],
   },
@@ -174,7 +250,7 @@ const projects = [
         layout: Masonry,
         container: {
           color: "color-primary-medium",
-          maxWidth: 'xl'
+          maxWidth: "xl",
         },
         component: {
           images: [
@@ -225,12 +301,10 @@ const projects = [
         layout: Masonry,
         container: {
           color: "color-primary-light",
-          maxWidth: 'lg'
+          maxWidth: "lg",
         },
         component: {
-          images: [
-            "/images/aptiv-sva/mockup.png",
-          ],
+          images: ["/images/aptiv-sva/mockup.png"],
         },
       },
       {
@@ -512,6 +586,5 @@ const projectsUpdates = projects.map((project, idx) => ({
     return { id, tileImg, title };
   }),
 }));
-
 
 export default projectsUpdates;
