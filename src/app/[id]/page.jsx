@@ -12,7 +12,7 @@ const ProjectPage = async ({ params }) => {
   const project = projects.find((project) => project.id === id);
   return (
     <div className={styles.root}>
-      <SimpleHero image={project.heroImg} />
+      <SimpleHero image={project.heroImg} heroPos={project.heroPos}/>
       <Container
         color="color-primary-medium"
         maxWidth="lg"

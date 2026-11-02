@@ -13,8 +13,8 @@
   --color-secondary: #f9e2e6;
 
   --font-primary: "Montserrat", sans-serif;
-  --font-secondary: "Gloock", cursive;
-  --secondary-letter-spacing: 6px;
+  --font-secondary: "Lemon", cursive;
+  --secondary-letter-spacing: 0px;
 
 
 
@@ -23,6 +23,7 @@
   box-sizing: border-box;
   font-weight: 400;
   font-family: var(--font-primary);
+  font-feature-settings: 'liga' on;
 }
 
 body {
