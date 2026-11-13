@@ -668,7 +668,7 @@ const projects = [
               src: "/images/canon-passport/masonry-5.jpg",
               position: "100% 50%",
             },
-            { src: "/images/canon-passport/masonry-6.jpg" },
+            { src: "/images/canon-passport/masonry-6.png" },
           ],
         },
       },
@@ -686,93 +686,257 @@ const projects = [
       },
     ],
   },
-  // {
-  //   id: "nissan-hd-mapping",
-  //   title: "Nissan High Definition Road Map",
-  //   heroImg: "hero.png",
-  //   heroPos: "50% 40%",
-  //   tileImg: "/images/nissan-hd-mapping/tile.jpg",
-  //   body: "<p>Nissan and Infiniti required an interactive mapping tool to show where their ProPilot Assist hands-free driving technology could be activated. The project was executed in two phases, several years apart. The first phase launched a ProPilot 2.0 map for Nissan US, supporting both English and Spanish. When ProPilot 2.1 was introduced, the scope expanded significantly, requiring new versions for Nissan Canada (English and French), Infiniti Canada (English and French), Infiniti US (English), and an updated Nissan US version in English, all while maintaining the existing ProPilot 2.0 pages. Compliance with Canadian regulations mandated that customers be provided with access to hands-free driving data, and sales in Canada were halted until these new pages were released.</p>",
-  //   skills: "OpenLayers, OpenStreetMap, Jinja, Jenkins, Jira, Gulp",
-  //   employer: "Critical Mass",
-  //   client: "Nissan",
-  //   role: "Tech Lead",
-  //   sections: [
-  //     {
-  //       layout: "image",
-  //       image: "hd-mapping-mocks.png",
-  //       backgroundColor: "#EBECED",
-  //     },
-  //     {
-  //       layout: "text",
-  //       title: "The Mission",
-  //       body: "As the Tech Lead, I was responsible for designing and implementing a scalable and interactive mapping solution that could handle multiple brands, regions, and languages while ensuring accurate data integration. The challenge was to overlay high-definition driving route data onto a base map while maintaining an intuitive and seamless user experience. The expansion also required adapting the platform to support multilingual content and ensuring the accuracy of new data layers before launch.",
-  //       backgroundColor: "#191C23",
-  //     },
-  //     {
-  //       layout: "text",
-  //       title: "The Approach",
-  //       body: "To achieve this, I utilized OpenLayers to overlay Dynamic Map Platform’s (DMP) highlighted road data onto an OpenStreetMap (OSM) base layer, creating an interactive and accurate visualization of hands-free driving routes. The map dynamically adjusted to center on the user’s region, switching between U.S. and Canadian route layers as needed. In Phase 2, I expanded multilingual support beyond the original English and Spanish implementation to include English and French for the Canadian market, ensuring compliance with regulatory requirements. I collaborated closely with DMP and Nissan-Infiniti to validate map data accuracy and resolve integration challenges. Managing both project phases required coordinating with multiple teams, optimizing performance across different site versions, and ensuring a seamless user experience while meeting tight deadlines.",
-  //       backgroundColor: "#191C23",
-  //     },
-  //     {
-  //       layout: "text",
-  //       title: "The Outcome",
-  //       body: "By delivering accurate, high-definition road data in an intuitive, interactive format, the map provided users with a seamless way to explore where ProPilot Assist could be activated, enhancing accessibility and trust in the technology. Over the first 200 days, the ProPilot Assist HD Map received 5,399 visits, averaging 810 visits per month, with 60-67% of users interacting with the map through actions like clicking and dragging (55-61%) and zooming in and out (36-49%). We continue to maintain these pages, making incremental updates to both the content and data to ensure accuracy and usability as the technology evolves. By implementing a scalable, multi-region, and multi-language solution, I ensured long-term maintainability, making future updates and expansions seamless for Nissan and Infiniti.",
-  //       backgroundColor: "#191C23",
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "nissan-ariya-launch-campaign",
-  //   title: "Nissan ARIYA Launch Campaign",
-  //   heroImg: "2023-nissan-ariya.webp",
-  //   heroPos: "50% 40%",
-  //   tileImg: "/images/nissan-ariya-launch-campaign/desktop-mockup.jpg",
-  //   body: '<p>With the long-awaited Nissan ARIYA, rolled out in 2023, Nissan was looking to raise excitement around its new all-electric SUV. For customers coming from their media and social campaigns, they needed a landing page to encourage customers to keep exploring the details of the new vehicle. Drawing from the already existing duality theme of the Ariya, we created a page to demonstrate all that the Ariya could achieve. From "fiercely refined" to "elegantly exhilarating", the site displayed split videos, key metrics, and plenty of images to draw the users into the experience. </p>',
-  //   skills: "Gatsby.js, styled-components, Jenkins, Jira",
-  //   employer: "Critical Mass",
-  //   client: "Nissan",
-  //   role: "Tech Lead",
-  //   sections: [
-  //     {
-  //       layout: "image",
-  //       image: "ariya-launch-mockup.png",
-  //       backgroundColor: "#EBECED",
-  //     },
-  //     {
-  //       layout: "text",
-  //       title: "Technical Details",
-  //       body: "The site was built with Gatbsy.js, interlacing video and animation. It contains a variety of CTAs to encourage users to read more, try out the ARIYA AR app, as well as visit the virtual reality experience. The site meets WCAG accessibility standards, includes site analytics, and incorporates SEO best practices.  I led a team of two developers and one QA analyst to deliver this site in a very tight three month timeline.  ",
-  //       backgroundColor: "#191C23",
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "infiniti-rebrand",
-  //   title: "Infiniti Rebrand",
-  //   heroImg: "hero-2.png",
-  //   heroPos: "50% 50%",
-  //   tileImg: "/images/infiniti-rebrand/hero-2.png",
-  //   body: "<p>In June 2023, Infiniti announced a brand refresh, complete with a new logo, color scheme, showrooms, sounds, and even fragrance. It's digital properties were making the transition from a primarily black & white palette to blue & beige with its signature horizon graphic. Our part in the overhaul was to ensure all Infiniti Shopping Tools pages followed the new brand guideline for both the American and Canadian markets. These pages included its build & price tool, inventory search, and payment estimator. I led a team of 2 developers and 2 QA analysts to complete the project in just under four months.</p>",
-  //   skills: "Gatsby.js, styled-components, Jenkins, Jira",
-  //   employer: "Critical Mass",
-  //   client: "Infiniti",
-  //   role: "Tech Lead",
-  //   sections: [
-  //     {
-  //       layout: "image",
-  //       image: "mockup.png",
-  //       backgroundColor: "#667084",
-  //     },
-  //     {
-  //       layout: "text",
-  //       title: "Project Details",
-  //       body: "As a crossover between the delivery team and technology team, I helped support project planning  tasks as well as the development and release phases. I provided estimates for frontend tasks to help inform prioritization, scheduling, and resourcing. From there, we agreed on key milestones for each application to ensure we hit our target date and demo progress to the clients. For the development phase, I led a team of two developers and two QA analysts to complete the project in just under four months. The  process also required coordination with the AEM and content management teams as we worked through dependencies. The initial production release was done on June 22, 2023, with rolling releases afterward for subsequent milestones.",
-  //       backgroundColor: "#191C23",
-  //     },
-  //   ],
-  // },
+  {
+    id: "nissan-hd-mapping",
+    title: "Nissan & Infiniti High Definition Road Map",
+    heroImg: "/images/nissan-hd-mapping/hero.png",
+    heroPos: "50% 40%",
+    tileImg: "/images/nissan-hd-mapping/tile.jpg",
+    summary:
+      "An interactive map showing where Nissan and Infiniti’s ProPilot Assist hands-free driving can be used, built to work across brands, regions, and three languages and to meet Canadian regulatory requirements.",
+    sections: [
+      {
+        layout: Image,
+        container: {
+          color: "color-primary-dark",
+          maxWidth: "lg",
+        },
+        component: {
+          src: "/images/nissan-hd-mapping/propilot-vehicle.jpg",
+          objectFit: "cover",
+        },
+      },
+      {
+        layout: Banner,
+        component: {
+          className: "banner",
+          header: "Why This Mattered",
+          body: "Nissan and Infiniti needed an interactive map showing where ProPilot Assist could be activated. The project ran in two phases, several years apart: first a ProPilot 2.0 map for Nissan US in English and Spanish, then a much larger scope with ProPilot 2.1, covering Nissan and Infiniti in the US and Canada in English, Spanish, and French. Canadian regulations required customers to have access to hands-free driving data, and sales in Canada were halted until the new pages launched.",
+          alignment: "left",
+        },
+        container: {
+          color: "color-primary-light",
+          maxWidth: "sm",
+        },
+      },
+      {
+        layout: Background,
+        component: {
+          image: "/images/nissan-hd-mapping/propilot-tech.jpg",
+          x: "69%",
+          y: "69%",
+        },
+        container: {
+          styleless: true,
+        },
+      },
+      {
+        layout: Banner,
+        component: {
+          alignment: "left",
+          header: "My Role",
+          body: "As Tech Lead, I owned the technical solution across both phases. I built the map in OpenLayers, overlaying Dynamic Map Platform’s highlighted route data onto an OpenStreetMap base, with panning, zooming, and location search. The map adjusts to the visitor’s region and switches between US and Canadian route data. I worked directly with DMP and Nissan-Infiniti’s parent office in Japan to validate data accuracy, and coordinated designers, developers, and QA to deliver on a deadline with sales on the line. I built it as a scalable system for multiple brands, regions, and languages, so new versions could be added without starting over. After launch, I used analytics to identify the ARIYA landing page as the top traffic driver (34-36% of visits) and recommended adding contextual CTAs on feature pages and blog posts to increase exposure.",
+        },
+        container: {
+          color: "color-primary-medium",
+          maxWidth: "sm",
+        },
+      },
+      {
+        layout: Masonry,
+        container: {
+          color: "color-primary-light",
+          maxWidth: "lg",
+        },
+        component: {
+          images: [{ src: "/images/nissan-hd-mapping/hd-mapping-mocks.png" }],
+        },
+      },
+      {
+        layout: Banner,
+        component: {
+          alignment: "left",
+          header: "Outcome",
+          body: "The map launched in both the US and Canada, meeting Canadian compliance requirements and allowing sales to resume. In its first 200 days it drew 5,399 visits, about 810 a month, and 60-67% of visitors interacted with the map, mostly by dragging (55-61%) and zooming (36-49%). The pages are still maintained, with incremental content and data updates as the technology evolves.",
+        },
+        container: {
+          color: "color-primary-medium",
+          maxWidth: "sm",
+        },
+      },
+    ],
+  },
+  {
+    id: "nissan-ariya-launch-campaign",
+    title: "Nissan ARIYA Launch Campaign",
+    heroImg: "/images/nissan-ariya-launch-campaign/2023-nissan-ariya.webp",
+    heroPos: "50% 40%",
+    tileImg: "/images/nissan-ariya-launch-campaign/desktop-mockup.jpg",
+    summary:
+      "A campaign landing page for the 2023 Nissan ARIYA that used split videos, key metrics, and the car’s built-in “duality” theme to pull visitors deeper into the new all-electric SUV.",
+    sections: [
+      {
+        layout: Masonry,
+        container: {
+          color: "color-primary-medium",
+          maxWidth: "xl",
+        },
+        component: {
+          images: [
+            { src: "/images/nissan-ariya-launch-campaign/mobile-mockup.jpg" },
+          ],
+        },
+      },
+      {
+        layout: Banner,
+        component: {
+          className: "banner",
+          header: "Why This Mattered",
+          body: "The ARIYA was Nissan’s long-awaited all-electric SUV, rolling out in 2023. Nissan’s media and social campaigns were driving excitement, but that traffic needed somewhere to land: a page that kept people exploring the details of the vehicle rather than bouncing after the ad. Drawing on the duality theme already tied to the ARIYA, we built a page showing everything it could be, from “fiercely refined” to “elegantly exhilarating.",
+          alignment: "left",
+        },
+        container: {
+          color: "color-primary-light",
+          maxWidth: "sm",
+        },
+      },
+      {
+        layout: Background,
+        component: {
+          image:
+            "/images/nissan-ariya-launch-campaign/desktop-mockup-with-woman.jpg",
+          x: "69%",
+          y: "69%",
+        },
+        container: {
+          styleless: true,
+        },
+      },
+      {
+        layout: Banner,
+        component: {
+          alignment: "left",
+          header: "My Role",
+          body: "As Tech Lead, I led a team of two developers and one QA analyst to deliver the site on a three-month timeline. The page was built in Gatsby.js, weaving together split-screen video, animation, key metrics, and imagery. Calls to action throughout encouraged visitors to read more, try the ARIYA AR app, or visit the virtual reality experience, so the page connected Nissan’s other digital touchpoints. It met WCAG accessibility standards and included site analytics and SEO best practices.",
+        },
+        container: {
+          color: "color-primary-medium",
+          maxWidth: "sm",
+        },
+      },
+      {
+        layout: Masonry,
+        container: {
+          color: "color-primary-light",
+          maxWidth: "lg",
+        },
+        component: {
+          images: [
+            {
+              src: "/images/nissan-ariya-launch-campaign/ariya-launch-mockup.png",
+            },
+          ],
+        },
+      },
+      {
+        layout: Banner,
+        component: {
+          alignment: "left",
+          header: "Outcome",
+          body: "We delivered the site on a tight three-month schedule, giving Nissan a destination for its ARIYA media and social campaigns, one that carried visitors on to the AR app and VR experience.",
+        },
+        container: {
+          color: "color-primary-medium",
+          maxWidth: "sm",
+        },
+      },
+    ],
+  },
+  {
+    id: "infiniti-rebrand",
+    title: "Infiniti Rebrand",
+    heroImg: "hero-2.png",
+    heroPos: "50% 50%",
+    tileImg: "/images/infiniti-rebrand/hero-2.png",
+    summary: "Bringing Infiniti’s build & price, inventory search, and payment estimator tools onto its new brand identity across the US and Canada, delivered in under four months to match the brand’s public launch.",
+    sections: [
+      {
+        layout: Masonry,
+        container: {
+          color: "color-primary-medium",
+          maxWidth: "xl",
+        },
+        component: {
+          images: [
+            { src: "/images/infiniti-rebrand/mobile-mockup.jpg" },
+          ],
+        },
+      },
+      {
+        layout: Banner,
+        component: {
+          className: "banner",
+          header: "Why This Mattered",
+          body: "In June 2023, Infiniti announced a full brand refresh: a new logo, color scheme, showrooms, sounds, and even a fragrance. Its digital properties were moving from a primarily black-and-white palette to blue and beige with a signature horizon graphic. The shopping tools were where customers actually did business with the brand, so they had to match the new identity on announcement day, in both the American and Canadian markets.",
+          alignment: "left",
+        },
+        container: {
+          color: "color-primary-light",
+          maxWidth: "sm",
+        },
+      },
+      {
+        layout: Background,
+        component: {
+          image:
+            "/images/infiniti-rebrand/desktop-mockup.jpg",
+          x: "69%",
+          y: "69%",
+        },
+        container: {
+          styleless: true,
+        },
+      },
+      {
+        layout: Banner,
+        component: {
+          alignment: "left",
+          header: "My Role",
+          body: "As Tech Lead, I worked at the crossover between the delivery and technology teams, supporting the project from planning through release. I estimated the frontend work for each application to inform prioritization, scheduling, and resourcing. From those estimates we set key milestones for the build & price tool, inventory search, and payment estimator, and demoed progress to the client at each one for approval. I led a team of two developers and two QA analysts through the build, coordinating with the AEM and content management teams as dependencies came up.",
+        },
+        container: {
+          color: "color-primary-medium",
+          maxWidth: "sm",
+        },
+      },
+      {
+        layout: Masonry,
+        container: {
+          color: "color-primary-light",
+          maxWidth: "lg",
+        },
+        component: {
+          images: [
+            {
+              src: "/images/infiniti-rebrand/mockup.png",
+            },
+          ],
+        },
+      },
+      {
+        layout: Banner,
+        component: {
+          alignment: "left",
+          header: "Outcome",
+          body: "The spec pods debuted at the Chicago Auto Show in July 2021, the first auto show after restrictions lifted. Ford kept expanding the program from there: we re-skinned the same system for Lincoln stands and built specialty versions for events like SEMA and CES, where special product innovations were highlighted.",
+        },
+        container: {
+          color: "color-primary-medium",
+          maxWidth: "sm",
+        },
+      },
+    ],
+  },
   // {
   //   id: "qx60-competitor-compare",
   //   title: "QX60 Competitor Compare",
